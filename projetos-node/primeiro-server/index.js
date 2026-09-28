@@ -2,15 +2,15 @@
 import { createServer } from "node:http";
 import { readFileSync } from "node:fs";
 
-const server = createServer((req, res) => {
-  res.writeHead(codigo, { "Content-Type": "html; charset=UTF-8", "Content-Language": "pt-BR" });
-
   let conteudo = "";
   let codigo = 200;
 
+const server = createServer((req, res) => {
+  res.writeHead(codigo, { "Content-Type": "html; charset=UTF-8", "Content-Language": "pt-BR" });
+
   try {
-    conteudo = readFileSync("./views/index2.html");
-  } catch (erro) {
+    conteudo = readFileSync("./views/index.html");
+  } catch (error) {
     conteudo = "<h1>Arquivo não encontrado</h1>";
     codigo = 404;
   }
