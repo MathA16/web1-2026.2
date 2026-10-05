@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <ul>
+        <% produtos.forEach(produto => { %>
+            <li><%= produto.titulo %> - <%= produto.plataforma %> - R$ <%= produto.preco.toFixed(2) %></li>
+        <% }); %>
+    </ul>
+    <p>Total de produtos:<%= produtos.lenth %></p>
+</body>
+</html>
